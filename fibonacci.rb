@@ -6,6 +6,12 @@ end
 
 puts recursive_fibonacci(5)
 
+def recursive_fibonacci(num)
+  return 1 if num == 1
+  return 2 if num == 2
+  recursive_fibonacci(num - 1) + recursive_fibonacci(num - 2)
+end
+
 
 def iterative_fibonacci(num)
   a = 0
