@@ -29,3 +29,18 @@ def anagram_of_palindrome(exp):
     #if length of anagram set is 0, it was an even-length word!
 print anagram_of_palindrome('red')
 print anagram_of_palindrome('tacocat')
+
+
+def anagram_of_palindrome(txt):
+    hash = {}
+    for char in txt:
+        if txt[char] in hash:
+            txt[char] += 1
+        else:
+            text[char] = 1
+    values_count = 0
+    for val in hash.values():
+        if val % 2 != 0:
+            values_count += 1
+
+    return values_count <= 1
