@@ -5,10 +5,11 @@ In order to accomplish this, I had to understand the relationship between the Me
 The Meal model `belongs_to` the MealPhoto model.
 - `belongs_to` denotes a one-to-one relationship with another model.
   - one instance of the declaring model matches with one instance of the other model
-- In other words, for every meal, there is potentially up to
+- In other words, for every meal, there is
 one meal_photo
 - Since the Meal model has a `belongs_to :meal_photo` association on it, this means that the
 Meal table contains the foreign keys (i.e., the primary keys of MealPhoto in this case).
+- Ensures referential integrity
 - Conversely, the MealPhoto model has a `has_one :meal`
 association on it
 - Provides a delegate class method to easily expose contained objects' public methods as your own.
