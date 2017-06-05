@@ -31,7 +31,7 @@ association on it
 
 
 Those are the three main definitions or categories from what I can tell from my research.
-  - Definition #1 doesn't tend to be used a lot these days, since there are languages like JavaScript that have higher-ordered functions but can still be used in an OOP-fashion. But, some people still call Common Lisp functional even though I believe it falls into the same category as JavaScript, Ruby, and Python.
+  - Definition #1 doesn't tend to be used a lot these days, since there are languages like JavaScript that have higher-ordered functions(filter, map, reduce) but can still be used in an OOP-fashion. But, some people still call Common Lisp functional even though I believe it falls into the same category as JavaScript, Ruby, and Python.
 
 
 - Some folks insist that languages that fall into Group #2 aren't "really functional" because they don't constrain side-effects beyond variable assignment and data structures

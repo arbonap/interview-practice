@@ -166,7 +166,7 @@ puts fizzbuzz
 def my_reverse(arr)
   output = []
   arr.map do |item|
-    output.unshift(item)
+    output.unshift(item) #unshift is PREPEND
   end
   print output
 end
@@ -311,9 +311,16 @@ puts longest_word("cheetos are delicious and amazing")
 #
 # # Define a method, #pair_product?, that accepts two arguments: an array of integers and a target_product (an integer). The method returns a boolean indicating whether any pair of elements in the array multiplied together equals that product. You cannot multiply an element by itself. An element on its own is not a product.
 # # pair_product?([3, 1, 5], 15) => true
-# def pair_product?(arr, target_product)
-#
-# end
+def pair_product?(arr, target_product)
+  arr.map do |num|
+    num.map do |item|
+      return true if num * item == target_product
+      false
+    end
+  end
+end
+puts pair_product?([1, 2, 3], 6)
+
 #
 # # Define a method, #slice_between_vowels(word), that accepts a string as an argument. Your method should return the slice of the word between the first and last vowels of that word. Return an empty string if the word has less than 2 vowels.
 # # slice_between_vowels("serendipity") => "rendip"
