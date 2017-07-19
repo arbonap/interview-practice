@@ -114,10 +114,21 @@ end
    if next_node
      node_to_delete.next = next_node.next
      node_to_delete.value = next_node.value
-  else
+   else
     raise "hell"
    end
  end
+
+def delete_node(node_to_delete)
+  next_node = node_to_delete.next
+
+  if next_node
+    node_to_delete.next = next_node.next
+    node_to_delete.value = next_node.value
+  end
+  raise Error "Sorry, you can't delete this last node. "
+  end
+end
 
 
  def delete_node(node_to_delete)
