@@ -55,3 +55,43 @@ puts reverse_in_place("Beyonce")
 #
 #     return "".join(string_list)
 #
+
+
+
+def reverse(txt)
+  output = []
+  txt.each_char do |char|
+    output.unshift(char) #unshift is like prepend
+  end
+
+  output.join
+end
+
+
+def reverse(txt)
+  output = []
+
+  txt.each_char do |char|
+    output.unshift(char)
+  end
+  output.join
+end
+
+
+
+def reverse_in_place(text)
+  left_pointer = 0
+  right_pointer = text.length - 1
+
+  string_dupe = text.chars
+
+  while left_pointer <= right_pointer
+    string_dupe[left_pointer] = string_dupe[right_pointer]
+    string_dupe[right_pointer] = string_dupe[left_pointer]
+
+    left_pointer += 1
+    right_pointer -= 1
+
+  end
+  string_dupe.join
+end

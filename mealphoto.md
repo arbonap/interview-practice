@@ -18,7 +18,7 @@ association on it
 `
 - Inserted an additional key-value pair of `photo_url: meal.meal_photos&.small_url` into a `meal_json` hash
 - The `meal_json` hash is then serialized into JSON, so that this information is presented client-side
-- Created a stateless `MealPhoto.jsx` React component, because it is a dummy component that either renders a meal photo or does not.
+- Created a stateless `MealPhoto.jsx` React component, because it is a 'dummy' component that either renders a meal photo or does not.
 - the `MealPhoto` React component requires `photo_url` as props (note that `photo_url` is a key from our JSON object)
 - I collaborated with a designer for styling decisions and utilized CSS Flexbox to align elements on the DOM
 

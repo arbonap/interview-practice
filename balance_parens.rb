@@ -30,7 +30,7 @@ def balance_brackets(txt)
   return false if txt.length.odd?
 
   opening = "({[<"
-  match = [("(",")"),("[","]"),("{","}"),("<", ">")]
+  match = [ ('(',')'), ('[',']'), ('{','}'), ('<', '>') ]
   stack = []
 
   txt.each_char do |char|

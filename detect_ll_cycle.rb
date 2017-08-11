@@ -14,6 +14,15 @@ class LinkedList
     @head = Node.new(value)
   end
 
+  def add(value)
+    current = @head
+    return current.next = Node.new(value) if current.next == nil
+    while current.next != nil
+      current = current.next
+    end
+    current.next = Node.new(value)
+  end
+
   def has_duplicate?(head)
     seen = Set.new
     current = @head

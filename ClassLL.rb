@@ -129,6 +129,64 @@ def kth_to_last_node(k, head)
   end
   return current_node
 end
+
+  def reverse(head_of_list)
+      current = head_of_list
+      previous = nil
+      next_node = nil
+
+    while current #until 'fallen off' end of array
+        #copy pointer to next element
+        #before we overwrite current.next
+
+        next_node = current.next
+
+        #reverse the 'next pointer'
+        current.next = previous
+
+        previous = current
+        current = next_node
+    end
+    previous
+  end
+
+  def reverse(head_of_list)
+    current = head_of_list
+    previous = nil
+    next_node = nil
+
+    while current
+      next_node = current.next
+
+      #reverse!!
+      current.next = previous
+
+      previous = current
+      current = next_node
+    end
+    previous
+  end
+
+  def reverse(head_of_list)
+    current = head_of_list
+    previous = nil
+    next_node = nil
+
+    while current
+      #save a pointer to next element
+      # before overwriting current.next
+    
+      next_node = current.next
+
+      #reverse~
+      current.next = previous
+
+      current = previous
+      previous = next_node
+    end
+    previous #return previous because when you exit the list, current is nil
+  end
+
 end
 
 

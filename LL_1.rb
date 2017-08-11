@@ -40,109 +40,6 @@ class LinkedList
     end
   end
 
-
-  def delete_node(node_to_delete)
-
-    next_node = node_to_delete.next
-
-    if next_node
-
-      node_to_delete.value = next_node.value
-      node_to_delete.next = next_node.next
-
-    else
-      raise "Nope, can't delete last node"
-    end
-  end
-
-  def delete_node(node_to_delete)
-
-    next_node = node_to_delete.next
-
-    if next_node
-      node_to_delete.value = next_node.value
-      node_to_delete.next = next_node.next
-    else
-      raise Exception, "Nope"
-    end
-
-  end
-
-  def delete_node(node_to_delete)
-
-    next_node = node_to_delete.next
-
-    if next_node
-      node_to_delete.value = next_node.value
-      node_to_delete.next = next_node.next
-    else
-      raise "Exception!!!!"
-    end
-
-
-  end
-
-def delete_node(node_to_delete)
-  next_node = node_to_delete.next
-
- if next_node
-    node_to_delete.value = next_node.value
-    node_to_delete.next = next_node.next
- else
-   raise Exception "nope"
- end
-end
-
-
-
-
- def delete_node(node_to_delete)
-   next_node = node_to_delete.next
-
-   if next_node
-     node_to_delete.next = next_node.next
-     node_to_delete.value = next_node.value
-  else
-    raise "hell"
-   end
- end
-
-
- def delete_node(node_to_delete)
-   next_node = node_to_delete.next
-
-   if next_node
-     node_to_delete.next = next_node.next
-     node_to_delete.value = next_node.value
-   else
-    raise "hell"
-   end
- end
-
-def delete_node(node_to_delete)
-  next_node = node_to_delete.next
-
-  if next_node
-    node_to_delete.next = next_node.next
-    node_to_delete.value = next_node.value
-  end
-  raise Error "Sorry, you can't delete this last node. "
-  end
-end
-
-
- def delete_node(node_to_delete)
-   next_node = node_to_delete.next
-
-   if next_node
-     node_to_delete.value = next_node.value
-     node_to_delete.next = next_node.next
-   end
-   raise "hell!"
- end
-
-end
-
 def delete_node(node_to_delete)
   next_node = node_to_delete.next
 
@@ -171,7 +68,7 @@ def kth_to_last_node(k, node_to_delete)
   return current_node
 end
 
-  def has_cycle(first_node)
+  def has_cycle?(first_node)
     slow_runner = first_node
     fast_runner = first_node
 
@@ -182,6 +79,20 @@ end
       return true if slow_runner == fast_runner
     end
     return false
+  end
+
+  def reverse(head_of_list)
+    current = head_of_list
+    previous = nil
+    next = nil
+
+    while current
+      next_node = current.next # keep pointer to next original node
+      #before overwriting current.next
+
+
+      #reverse!!!!!
+    end
   end
 end
 
