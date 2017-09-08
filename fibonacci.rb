@@ -23,3 +23,33 @@ def iterative_fibonacci(num)
 end
 
 puts iterative_fibonacci(4)
+
+class Fibber
+    def initialize
+        @memo = {}
+    end
+
+    def fib(n)
+
+        # edge case: negative index
+        if n < 0
+            raise Exception, "Index was negative. No such thing as a negative index in a series."
+
+        # base case: 0 or 1
+        elsif n == 0 || n == 1
+            return n
+        end
+
+        # see if we've already calculated this
+        if @memo.include? n
+            return @memo[n]
+        end
+
+        result = self.fib(n-1) + self.fib(n-2)
+
+        # memoize
+        @memo[n] = result
+
+        return result
+    end
+end
